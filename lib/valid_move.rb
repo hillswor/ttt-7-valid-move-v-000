@@ -1,11 +1,9 @@
 def position_taken? (board, index)
-   move = index.to_i
-   position = move - 1
-   if board[position] == "" || board[position] = " " || board[position] == nil
-     false
-   else board[position] == "X" || board[position] == "O"
+   if board[index] == "X" || board[index] == "O"
      true
-   end
+   else board[index] != "" || board[index] != " " || board[index] != nil
+     false
+     end
  end
 
  def valid_move? (board, index)
