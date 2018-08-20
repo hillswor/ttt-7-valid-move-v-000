@@ -1,3 +1,4 @@
+require "pry"
 def valid_move?(board, input)
   index = input.to_i
   move = index - 1
