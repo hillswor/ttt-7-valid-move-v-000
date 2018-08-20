@@ -3,7 +3,7 @@ def position_taken? (board, index)
    position = move - 1
    if board[position] == "" || board[position] = " " || board[position] == nil
      false
-   elsif board[position] == "X" || board[position] == "O"
+   else board[position] == "X" || board[position] == "O"
      true
    end
  end
