@@ -1,7 +1,9 @@
 require "pry"
+
 def valid_move?(board, input)
   index = input.to_i
   move = index - 1
+  binding.pry
   if position_taken?(board, index) == false && index.between?(0, 8)
     true
   else
