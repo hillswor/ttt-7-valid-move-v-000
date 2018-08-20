@@ -13,7 +13,7 @@ def position_taken? (board, index)
    position = move - 1
    if position_taken?(board, position) == false && position.between?(0, 8)
      true
-   elsif position_taken?(board, position) == true && position.between?(0, 8)
+   else position_taken?(board, position) == true && position.between?(0, 8)
      false
    end
 end
