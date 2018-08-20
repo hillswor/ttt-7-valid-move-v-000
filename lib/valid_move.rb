@@ -1,9 +1,4 @@
-def valid_move? (board, index)
-  move = index.to_i
-
-end
-
- def position_taken? (board, index)
+def position_taken? (board, index)
    move = index.to_i
    position = move - 1
    if board[position] == "" || board[position] = " " || board[position] == nil
@@ -12,3 +7,13 @@ end
      true
    end
  end
+
+ def valid_move? (board, index)
+   move = index.to_i
+   position = move - 1
+   if position_taken?(board, position) == false && position.between(0, 8)
+     true
+   elsif position_taken?(board, position) == true && position.between(0, 8)
+     false
+   end
+end
